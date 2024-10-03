@@ -1,11 +1,11 @@
-# Homepage
-## Navigation Menu
-- Homepage
-- About
-- Visual Arts
-- Contact
+# Navigation Menu
+- [Homepage](#Homepage)
+- [About](#About)
+- [Visual](#Visual)
+- [Contact](#Contact)
 - Resume (PDF Link)
 
+# Homepage
 ## Introduction
 ### Hello ___! I’m Chloe Peng,
 #### A UX Designer and Product Leader
@@ -40,7 +40,7 @@ I’m an intuitive creative, dedicated to bringing experiences that bridge the g
 #### Cafe: 
 - You can always find me working at a cafe with my matcha latte in hand
 
-# About Me
+# About
 ## Introduction 
 ### A Letter from Me, to You
 ### To ____,
@@ -102,7 +102,7 @@ Designed a guided journaling app to help users identify the emotions they felt d
 - Pins: UI Design, Mobile Design, Figma
 - View Project
 
-# Visual Arts
+# Visuals
 ## Graphic Design
 ### Color Studies
 I embraced the challenge of using randomly generated color palettes to guide the creative process. Instead of selecting hues based on preconceived ideas, I allowed the palette to dictate the imagery, encouraging a deeper exploration of color relationships and associations.

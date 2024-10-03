@@ -1,7 +1,7 @@
 # Navigation Menu
 - [Homepage](#Homepage)
 - [About](#About)
-- [Visual](#Visual)
+- [Visuals](#Visuals)
 - [Contact](#Contact)
 - Resume (PDF Link)
 

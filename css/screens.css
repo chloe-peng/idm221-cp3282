@@ -27,7 +27,7 @@ p {
     font-size: 18px;
 }
 
-div.intro {
+div.img-text {
     background-color: #FBEEDD;
     color: #434343;
     border-color: black;
@@ -41,7 +41,7 @@ div.intro {
     padding: 20px;
 }
 
-.intro img {
+.img-text img {
     width: 100%;
     max-width: 50%;
     object-fit: cover;

@@ -1,30 +1,61 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('Manrope-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('Manrope-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('Manrope-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     margin: 0px;
     background-color: #D8E7D8;
 }
 
 h1, h2, h3, h4, p {
-    font-family:'Poppins';
+    font-family: Manrope;
 }
 
 h1 {
     font-size: 36px;
+    font-weight: 600;
+    line-height: 14px;
 }
 
 h2 {
     font-size: 30px;
+    font-weight: 600;
+    line-height: 28px;
 }
 
 h3 {
     font-size: 24px;
+    font-weight: normal;
 }
 
 h4 {
     font-size: 20px;
+    font-weight: normal;
 }
 
 p {
     font-size: 18px;
+    font-weight: 300;
 }
 
 div.img-text {
@@ -37,19 +68,18 @@ div.img-text {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    margin: 30px;
+    margin: 10px auto;
     padding: 20px;
 }
 
 .img-text img {
-    width: 100%;
-    max-width: 50%;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
 .intro-text {
-    width: 100%;
-    max-width: 50%;
+    padding: 25px;
 }
 
 main {

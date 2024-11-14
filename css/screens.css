@@ -27,14 +27,15 @@ body {
     background-color: #D8E7D8;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, button {
     font-family: Manrope;
+    color: #434343;
 }
 
 h1 {
     font-size: 36px;
     font-weight: 600;
-    line-height: 14px;
+    line-height: 36px;
 }
 
 h2 {
@@ -58,12 +59,26 @@ p {
     font-weight: 300;
 }
 
-div.img-text {
+b {
+    font-weight: 600; 
+}
+
+header {
+    top: 0;
+    left: 0;
+    height: 50px;
+    background-color: #3A526E;
+    width: 100%;
+    margin: 0px;
+}
+
+div {
     background-color: #FBEEDD;
-    color: #434343;
-    border-color: black;
-    border-width: 3px;
+    border: 3px solid #434343;
     border-radius: 30px;
+}
+
+.img-text {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -76,10 +91,15 @@ div.img-text {
     max-width: 100%;
     height: auto;
     object-fit: cover;
+    margin: 0px;
 }
 
 .intro-text {
-    padding: 25px;
+    padding: 30px;
+
+    h1, h2, p {
+        margin: 15px auto;
+    }
 }
 
 main {
@@ -88,18 +108,13 @@ main {
 }
 
 div.case-study {
-    background-color: #FBEEDD;
     padding: 20px;
-    margin: 30px;
+    margin: 30px auto;
     border-radius: 15% 5%;
-    border-color: black;
-    border-width: 3px;
-    color: #434343;
     text-align: left;
 }
 
 button.cs-button {
-    font-family: 'Poppins';
     background-color: #3A526E;
     color: white;
     text-align: center;
@@ -108,3 +123,28 @@ button.cs-button {
     padding: 10px;
     width: 40%;
 }
+
+
+/* .intro-card {
+    width: 100%;
+    max-width: 350px;
+    height: 500px;
+    object-fit: cover;
+  }
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+
+  .gallery::after {
+    content: "";
+    width: 350px;
+  } */

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Manrope';
-    src: url('Manrope-Light.woff2') format('woff2');
+    src: url('../fonts/Manrope-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Manrope';
-    src: url('Manrope-SemiBold.woff2') format('woff2');
+    src: url('../fonts/Manrope-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -16,14 +16,30 @@
 
 @font-face {
     font-family: 'Manrope';
-    src: url('Manrope-Regular.woff2') format('woff2');
+    src: url('../fonts/Manrope-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Tan Meringue';
+    src: url('../fonts/Tan-Meringue.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.fancy-font {
+    font-family: 'Tan Meringue';
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0px;
+    margin: auto 40px;
     background-color: #D8E7D8;
 }
 
@@ -94,7 +110,7 @@ div {
     margin: 0px;
 }
 
-.intro-text {
+.standard-text {
     padding: 30px;
 
     h1, h2, p {
@@ -114,16 +130,74 @@ div.case-study {
     text-align: left;
 }
 
-button.cs-button {
+button {
     background-color: #3A526E;
     color: white;
     text-align: center;
-    border-color: white;
+    border-color: black;
     border-radius: 10px;
+}
+
+.cs-button {
     padding: 10px;
     width: 40%;
 }
 
+.test {
+    border: none;
+    height: auto;
+    margin: 10px auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    border: 0px solid #D8E7D8;
+    border-radius: 0px;
+    background-color: #D8E7D8;
+}
+
+.tab {
+    background-color: transparent;
+    border-bottom: 50px solid #3A526E;
+	border-left: 25px solid transparent;
+	border-right: 25px solid #3A526E;
+    border-top: none;
+    border-radius: 0px;
+	height: 0;
+	width: 50%;
+    
+    h2 {
+        color: white;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 0px;
+    background-color: #FBEEDD;
+    height: auto;
+}
+
+@media screen and (max-width: 900px){
+    .content img{
+        width: auto;
+    }
+
+    .content{
+       flex-direction: column;
+    }
+ }
 
 /* .intro-card {
     width: 100%;

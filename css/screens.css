@@ -39,8 +39,12 @@
 }
 
 body {
-    margin: auto 40px;
+    margin: 0px;
     background-color: #D8E7D8;
+}
+
+main {
+    margin: 5px 5px 100px 5px;
 }
 
 h1, h2, h3, h4, p, button {
@@ -80,12 +84,48 @@ b {
 }
 
 header {
-    top: 0;
-    left: 0;
-    height: 50px;
     background-color: #3A526E;
     width: 100%;
     margin: 0px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 48px;
+
+    span {
+        background-color: white;
+        border-radius: 2px;
+        display: block;
+        height: 5px;
+        position: absolute;
+        width: 5%;
+  
+        transform-origin: left;
+  
+        &:nth-child(1) {
+          top: 12px;
+        }
+  
+        &:nth-child(2) {
+          top: 20px;
+        }
+  
+        &:nth-child(3) {
+          top: 28px;
+        }
+    }
+}
+
+nav {
+    background-color: #3A526E;
+    height: 100vh;
+    width: 300px;
+
+    position: fixed;
+    right: -300px;
+    top: 0;
+    z-index: 200;
 }
 
 div {
@@ -104,14 +144,15 @@ div {
 }
 
 .img-text img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     object-fit: cover;
-    margin: 0px;
+    margin: 0px auto;
 }
 
 .standard-text {
-    padding: 30px;
+    padding: 0 30px;
+    border: none;
 
     h1, h2, p {
         margin: 15px auto;

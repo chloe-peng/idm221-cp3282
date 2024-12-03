@@ -30,8 +30,14 @@
     font-display: swap;
 }
 
-.fancy-font {
-    font-family: 'Tan Meringue';
+html {
+    --background-color-light: #D8E7D8;
+    --text-color-light: #434343;
+    --box-beige-light: #FBEEDD;
+    --box-blue-light: #3A526E;
+
+    --font-sans: Manrope;
+    --font-serif: 'Tan Meringue';
 }
 
 * {
@@ -39,17 +45,17 @@
 }
 
 body {
-    margin: 0px;
-    background-color: #D8E7D8;
+    margin-top: 60px;
+    background-color: var(--background-color-light);
 }
 
 main {
-    margin: 5px 5px 100px 5px;
+    margin: 5px;
 }
 
 h1, h2, h3, h4, p, button {
     font-family: Manrope;
-    color: #434343;
+    color: var(--text-color-light);
 }
 
 h1 {
@@ -84,7 +90,7 @@ b {
 }
 
 header {
-    background-color: #3A526E;
+    background-color: var(--box-blue-light);
     width: 100%;
     margin: 0px;
 
@@ -93,45 +99,110 @@ header {
     left: 0;
     height: 48px;
 
-    span {
-        background-color: white;
-        border-radius: 2px;
-        display: block;
-        height: 5px;
+    label {
+        cursor: pointer;
+        height: 20px;
         position: absolute;
-        width: 5%;
-  
-        transform-origin: left;
-  
-        &:nth-child(1) {
-          top: 12px;
-        }
-  
-        &:nth-child(2) {
-          top: 20px;
-        }
-  
-        &:nth-child(3) {
-          top: 28px;
+        right: 1rem;
+        top: 1rem;
+        width: 26px;
+        z-index: 1001;
+    
+        span {
+          background-color: white;
+          border-radius: 2px;
+          display: block;
+          height: 3px;
+          position: absolute;
+          width: 100%;
+    
+          transform-origin: left;
+    
+          &:nth-child(1) {
+            top: 0;
+          }
+    
+          &:nth-child(2) {
+            top: 8px;
+          }
+    
+          &:nth-child(3) {
+            top: 16px;
+          }
         }
     }
 }
 
 nav {
-    background-color: #3A526E;
+    background: var(--box-blue-light);
     height: 100vh;
-    width: 300px;
-
+    margin-block-start: 48px;
+    width: 0px;
+  
     position: fixed;
     right: -300px;
     top: 0;
-    z-index: 200;
-}
+    z-index: 1000;
+  
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  
+      li {
+        padding: 0;
+  
+        a {
+          color: white;
+          display: block;
+          font-size: 1.25rem;
+          padding-block: 1rem;
+          padding-inline: 1rem;
+          text-decoration: none;
+  
+          &:hover {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+    }
+  }
 
-div {
-    background-color: #FBEEDD;
-    border: 3px solid #434343;
-    border-radius: 30px;
+  .nav-toggle:checked ~ nav {
+    right: 0;
+  }
+  
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+    transform: rotate(45deg);
+    top: -2px; /* Fix */
+  }
+  
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+.title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin: 5px auto;
+    
+    h1 {
+        font-family: var(--font-serif);
+        font-size: 48px;
+        text-align: center;
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .img-text {
@@ -141,13 +212,17 @@ div {
     align-items: center;
     margin: 10px auto;
     padding: 20px;
-}
 
-.img-text img {
-    max-width: 90%;
-    height: auto;
-    object-fit: cover;
-    margin: 0px auto;
+    background-color: var(--box-beige-light);
+    border: 1px solid var(--text-color-light);
+    border-radius: 30px;
+
+    img {
+        max-width: 90%;
+        height: auto;
+        object-fit: cover;
+        margin: 0px auto;
+    }
 }
 
 .standard-text {
@@ -160,31 +235,47 @@ div {
 }
 
 main {
-    background-color: #D8E7D8;
     margin: 0px;
 }
 
 div.case-study {
     padding: 20px;
-    margin: 30px auto;
+    margin: 0px auto;
     border-radius: 15% 5%;
     text-align: left;
+    border: none;
 }
 
 button {
-    background-color: #3A526E;
+    background-color: var(--box-blue-light);
     color: white;
     text-align: center;
-    border-color: black;
+    border-color: var(--text-color-light);
     border-radius: 10px;
 }
 
 .cs-button {
     padding: 10px;
-    width: 40%;
+    width: 50%;
 }
 
-.test {
+.card {
+    border-bottom: 1px solid #434343;
+
+    h2, p {
+        margin: 7px;
+        line-height: 1.2;
+    }
+
+    img {
+        border-radius: 10px;
+        width: 600px;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+/* .test {
     border: none;
     height: auto;
     margin: 10px auto;
@@ -238,7 +329,7 @@ button {
     .content{
        flex-direction: column;
     }
- }
+ } */
 
 /* .intro-card {
     width: 100%;

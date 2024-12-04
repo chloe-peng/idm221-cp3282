@@ -31,9 +31,9 @@
 }
 
 html {
-    --background-color-light: #D8E7D8;
+    --background-color-light: #FBEEDD;
     --text-color-light: #434343;
-    --box-beige-light: #FBEEDD;
+    --box-green-light: #D8E7D8;
     --box-blue-light: #3A526E;
 
     --font-sans: Manrope;
@@ -45,7 +45,8 @@ html {
 }
 
 body {
-    margin-top: 60px;
+    margin-top: 80px;
+    margin-inline: 10px;
     background-color: var(--background-color-light);
 }
 
@@ -53,7 +54,8 @@ main {
     margin: 5px;
 }
 
-h1, h2, h3, h4, p, button {
+h1, h2, h3, h4, p, button, ul, li {
+    margin: 0px;
     font-family: Manrope;
     color: var(--text-color-light);
 }
@@ -137,10 +139,10 @@ nav {
     background: var(--box-blue-light);
     height: 100vh;
     margin-block-start: 48px;
-    width: 0px;
+    width: 200px;
   
     position: fixed;
-    right: -300px;
+    right: -200px;
     top: 0;
     z-index: 1000;
   
@@ -186,7 +188,7 @@ nav {
     transform: rotate(-45deg);
   }
 
-.title {
+.section-title {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -202,18 +204,14 @@ nav {
     img {
         width: 30px;
         height: 30px;
+        margin: 0px 2px;
     }
 }
 
 .img-text {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
     margin: 10px auto;
     padding: 20px;
 
-    background-color: var(--box-beige-light);
     border: 1px solid var(--text-color-light);
     border-radius: 30px;
 
@@ -221,24 +219,17 @@ nav {
         max-width: 90%;
         height: auto;
         object-fit: cover;
+        display: block;
         margin: 0px auto;
     }
-}
 
-.standard-text {
-    padding: 0 30px;
-    border: none;
-
-    h1, h2, p {
-        margin: 15px auto;
+    h1, h2, h3, h4, p {
+        padding: 0 20px;
+        margin: 10px auto;
     }
 }
 
-main {
-    margin: 0px;
-}
-
-div.case-study {
+.case-study {
     padding: 20px;
     margin: 0px auto;
     border-radius: 15% 5%;
@@ -256,7 +247,9 @@ button {
 
 .cs-button {
     padding: 10px;
-    width: 50%;
+    width: 100%;
+    margin-block: 10px;
+    text-align: center;
 }
 
 .card {
@@ -275,82 +268,53 @@ button {
     }
 }
 
-/* .test {
-    border: none;
-    height: auto;
-    margin: 10px auto;
+.text-serif {
+    font-family: var(--font-serif);
+    font-size: 26px;
 }
 
-.container {
+.inline-img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
     align-items: center;
-    border: 0px solid #D8E7D8;
-    border-radius: 0px;
-    background-color: #D8E7D8;
-}
-
-.tab {
-    background-color: transparent;
-    border-bottom: 50px solid #3A526E;
-	border-left: 25px solid transparent;
-	border-right: 25px solid #3A526E;
-    border-top: none;
-    border-radius: 0px;
-	height: 0;
-	width: 50%;
-    
-    h2 {
-        color: white;
-    }
-}
-
-.content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    border-width: 2px;
-    border-color: black;
-    border-style: solid;
-    border-radius: 0px;
-    background-color: #FBEEDD;
-    height: auto;
-}
-
-@media screen and (max-width: 900px){
-    .content img{
-        width: auto;
-    }
-
-    .content{
-       flex-direction: column;
-    }
- } */
-
-/* .intro-card {
-    width: 100%;
-    max-width: 350px;
-    height: 500px;
-    object-fit: cover;
-  }
-
-.gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 16px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px 10px;
-  }
 
-  .gallery::after {
-    content: "";
-    width: 350px;
-  } */
+    margin: 10px 10px;
+
+    img {
+        width: 40px;
+    }
+}
+
+.intro-card {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center; */
+    margin: 10px auto;
+    padding: 20px;
+
+    border: 1px solid var(--text-color-light);
+    border-radius: 30px;
+
+    text-align: center;
+
+    img {
+        border-radius: 10px;
+        margin-block: 3px;
+        width: 300px;
+        height: auto;
+    }
+
+    vid {
+        width: 300px;
+        height: auto;
+    }
+
+    h4 {
+        font-family: var(--font-serif);
+        font-size: 20px;
+        text-transform: lowercase;
+    }
+}

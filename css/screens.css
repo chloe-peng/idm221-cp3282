@@ -197,7 +197,7 @@ nav {
     
     h1 {
         font-family: var(--font-serif);
-        font-size: 48px;
+        font-size: 42px;
         text-align: center;
     }
 
@@ -230,11 +230,15 @@ nav {
 }
 
 .case-study {
-    padding: 20px;
+    padding-inline: 5spx;
     margin: 0px auto;
     border-radius: 15% 5%;
     text-align: left;
     border: none;
+
+    h4 {
+        font-size: 18px;
+    }
 }
 
 button {
@@ -316,5 +320,17 @@ button {
         font-family: var(--font-serif);
         font-size: 20px;
         text-transform: lowercase;
+    }
+}
+
+.contact-section {
+    padding: 10px;
+
+    h1, h2, p {
+        margin-block: 15px;
+    }
+
+    h1 {
+        line-height: 0.9;
     }
 }

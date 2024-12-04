@@ -19,11 +19,11 @@
            
             <nav>
               <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Visuals</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="visuals.html">Visuals</a></li>
+                <li><a href="#contact">Contact</a></li>
               </ul>
             </nav>
         </header>
@@ -35,15 +35,13 @@
 
         <div class="img-text">
             <img src="" alt="picture of self" width='50%'>
-            <div class="standard-text" width='50%'>
-                <h1>A Letter From Me, To You</h1>
+            <h1>A Letter From Me, To You</h1>
                 <h2>I'm Chloe</h2>
                 <p>Currently a second-year student studying User Experience & Interaction Design @ Drexel University. My focus is on researching user needs and designing interfaces that will effectively meet them using data-driven insights.</p>
                 <p>Otherwise as a Brooklyn native, I've developed an appreciation for multiple medias of art at a young age. From dance, music, photography, creative writing until I landed on design.</p>
-            </div>
         </div>
 
-        <main class="img-text" style="background-color: transparent;">
+        <main class="img-text">
             <div class="card">
                 <img src="./images/about-image1.jpg" alt="artist stand in union square">
                 <h2>On a more <span class="text-serif">personal</span> level</h2>
@@ -63,10 +61,18 @@
             </div>
         </main>
 
-        <section id="contact">
+        <section id="contact" class="contact-section">
             <h1>So now I want to know about <span class="text-serif">you</span>? What <span class="text-serif">inspires</span> you?</span></h1>
-            <h2>Let's coffee chat!</h2>
+            <div class="inline-img">
+                <h2>Let's coffee chat!</h2>
+                <img src="./images/coffee-icon.png" alt="coffee icon">
+            </div>
             <p>If you want to chat about design, or anything else, don't hesitate in reaching out! I’m always available for side collaborations and is currently looking for an internship and co-op for Spring/Summer 2025.</p>
+            
+            <div class="inline-img" style="margin: 0px; padding: 0px;">
+                <a href="chloe.pengg@gmail.com"><img src="./images/email-icon.jpg" alt="email button" style="width: 100px"></a>
+                <a href="www.linkedin.com/in/chloepeng0"><img src="./images/linkedin-icon.jpg" alt="linkedin button" style="width: 100px"></a>
+            </div>
         </section>
     </body>
 </html>

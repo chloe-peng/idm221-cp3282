@@ -91,6 +91,14 @@ b {
     font-weight: 600; 
 }
 
+a {
+    color: var(--box-blue-light);
+
+    :hover {
+        color: var(--box-blue-light);
+    }
+}
+
 header {
     background-color: var(--box-blue-light);
     width: 100%;
@@ -230,9 +238,8 @@ nav {
 }
 
 .case-study {
-    padding-inline: 5spx;
+    /* padding-inline: 3px; */
     margin: 0px auto;
-    border-radius: 15% 5%;
     text-align: left;
     border: none;
 
@@ -274,7 +281,7 @@ button {
 
 .text-serif {
     font-family: var(--font-serif);
-    font-size: 26px;
+    font-size: 24px;
 }
 
 .inline-img {
@@ -292,23 +299,24 @@ button {
 }
 
 .intro-card {
-    /* display: flex;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center; */
+    align-items: center;
     margin: 10px auto;
     padding: 20px;
 
     border: 1px solid var(--text-color-light);
     border-radius: 30px;
 
-    text-align: center;
+    text-align: left;
 
     img {
         border-radius: 10px;
-        margin-block: 3px;
         width: 300px;
         height: auto;
+        display: block;
+        margin: 3px auto;
     }
 
     vid {
@@ -316,7 +324,7 @@ button {
         height: auto;
     }
 
-    h4 {
+    h1, h4 {
         font-family: var(--font-serif);
         font-size: 20px;
         text-transform: lowercase;
@@ -332,5 +340,43 @@ button {
 
     h1 {
         line-height: 0.9;
+    }
+}
+
+.page-card {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 10px auto;
+    padding: 20px;
+
+    border: 1px solid var(--text-color-light);
+    border-radius: 30px;
+
+    img:first-of-type {
+        border-radius: 10px;
+        margin-block: 3px;
+        width: 300px;
+        height: auto;
+    }
+
+    h1, h4 {
+        font-family: var(--font-serif);
+        font-size: 20px;
+        text-transform: lowercase;
+    }
+}
+
+.section-style {
+    padding-inline: 3px;
+
+    p {
+        line-height: 1.15;
+    }
+
+    img {
+        border-radius: 5px;
+        display: block;
+        margin: 3px auto;
     }
 }

@@ -45,13 +45,13 @@ html {
 }
 
 body {
-    margin-top: 80px;
+    margin-top: 70px;
     margin-inline: 10px;
     background-color: var(--background-color-light);
 }
 
 main {
-    margin: 5px;
+    margin: 10px;
 }
 
 h1, h2, h3, h4, p, button, ul, li {
@@ -313,16 +313,16 @@ button {
 
     img {
         border-radius: 10px;
-        width: 300px;
+        width: 100%;
         height: auto;
         display: block;
         margin: 3px auto;
     }
 
-    vid {
+    /* vid {
         width: 300px;
         height: auto;
-    }
+    } */
 
     h1, h4 {
         font-family: var(--font-serif);
@@ -331,7 +331,7 @@ button {
     }
 }
 
-.contact-section {
+#contact {
     padding: 10px;
 
     h1, h2, p {

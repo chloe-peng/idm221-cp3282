@@ -31,9 +31,9 @@
 }
 
 html {
-    --background-color-light: #FBEEDD;
+    --background-color-light: #EBE9E8;
     --text-color-light: #434343;
-    --box-green-light: #D8E7D8;
+    --box-offwhite-light: #f2f2f2;
     --box-blue-light: #3A526E;
 
     --font-sans: Manrope;
@@ -46,7 +46,7 @@ html {
 
 body {
     margin-top: 70px;
-    margin-inline: 10px;
+    /* margin-inline: 10px; */
     background-color: var(--background-color-light);
 }
 
@@ -80,11 +80,13 @@ h3 {
 h4 {
     font-size: 20px;
     font-weight: normal;
+    line-height: 1.1;
 }
 
 p {
     font-size: 18px;
     font-weight: 300;
+    line-height: 1;
 }
 
 b {
@@ -96,6 +98,7 @@ a {
 
     :hover {
         color: var(--box-blue-light);
+        text-decoration-color: var(--box-blue-light);
     }
 }
 
@@ -122,7 +125,7 @@ header {
           background-color: white;
           border-radius: 2px;
           display: block;
-          height: 3px;
+          height: 4px;
           position: absolute;
           width: 100%;
     
@@ -147,10 +150,10 @@ nav {
     background: var(--box-blue-light);
     height: 100vh;
     margin-block-start: 48px;
-    width: 200px;
+    width: 100vw;
   
     position: fixed;
-    right: -200px;
+    right: -100vw;
     top: 0;
     z-index: 1000;
   
@@ -165,9 +168,9 @@ nav {
         a {
           color: white;
           display: block;
-          font-size: 1.25rem;
+          font-size: 38px;
           padding-block: 1rem;
-          padding-inline: 1rem;
+          padding-inline: 2rem;
           text-decoration: none;
   
           &:hover {
@@ -201,12 +204,13 @@ nav {
     flex-direction: row;
     flex-wrap: wrap;
 
-    margin: 5px auto;
+    margin: 5px 5px;
     
     h1 {
-        font-family: var(--font-serif);
+        /* font-family: var(--font-serif); */
         font-size: 42px;
-        text-align: center;
+        text-align: left;
+        line-height: 1.4;
     }
 
     img {
@@ -216,15 +220,15 @@ nav {
     }
 }
 
-.img-text {
-    margin: 10px auto;
-    padding: 20px;
+.container {
+    margin: 0px auto;
+    padding: 0px 20px;
 
     border: 1px solid var(--text-color-light);
     border-radius: 30px;
 
     img {
-        max-width: 90%;
+        max-width: 100%;
         height: auto;
         object-fit: cover;
         display: block;
@@ -237,45 +241,20 @@ nav {
     }
 }
 
-.case-study {
-    /* padding-inline: 3px; */
-    margin: 0px auto;
-    text-align: left;
-    border: none;
+.action-button {
+    display: flex;
+    justify-content: center;
 
-    h4 {
-        font-size: 18px;
-    }
-}
-
-button {
-    background-color: var(--box-blue-light);
-    color: white;
-    text-align: center;
-    border-color: var(--text-color-light);
+    padding: 10px 20px;
+    width: 80%;
+    margin: 10px auto;
     border-radius: 10px;
-}
-
-.cs-button {
-    padding: 10px;
-    width: 100%;
-    margin-block: 10px;
-    text-align: center;
-}
-
-.card {
-    border-bottom: 1px solid #434343;
-
-    h2, p {
-        margin: 7px;
-        line-height: 1.2;
-    }
-
-    img {
-        border-radius: 10px;
-        width: 600px;
-        display: block;
-        margin: 10px auto;
+    background-color: var(--box-blue-light);
+    
+    a {
+        color: white;
+        text-align: center;
+        border-color: var(--text-color-light);
     }
 }
 
@@ -294,20 +273,26 @@ button {
     margin: 10px 10px;
 
     img {
-        width: 40px;
+        width: 30px;
     }
 }
 
-.intro-card {
+.center-img {
+    display: block;
+    margin: 0px auto;
+}
+
+.card {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+
     margin: 10px auto;
     padding: 20px;
 
-    border: 1px solid var(--text-color-light);
+    background-color: ;
     border-radius: 30px;
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
 
     text-align: left;
 
@@ -319,15 +304,16 @@ button {
         margin: 3px auto;
     }
 
-    /* vid {
-        width: 300px;
-        height: auto;
-    } */
-
-    h1, h4 {
+    h2 {
+        text-align: left;
+        margin-block: 10px;
+    }
+    
+    h4 {
         font-family: var(--font-serif);
         font-size: 20px;
         text-transform: lowercase;
+        text-align: center;
     }
 }
 
@@ -343,7 +329,7 @@ button {
     }
 }
 
-.page-card {
+.visual-page-card {
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -367,16 +353,96 @@ button {
     }
 }
 
-.section-style {
+.photo-section {
+    margin: 10px auto;
+    padding-block: 20px;
     padding-inline: 3px;
 
-    p {
-        line-height: 1.15;
+    border: 1px solid var(--text-color-light);
+    border-radius: 30px;
+
+    h2, h3, h4, p {
+        padding: 3px 20px;
+        margin: 5px auto;
+        
+        p {
+            line-height: 1.2;
+        }
     }
 
     img {
-        border-radius: 5px;
         display: block;
+        object-fit: cover;
+        max-width: 90%;
+        height: auto;
+
+        border-radius: 5px;
         margin: 3px auto;
     }
+}
+
+.text-container-shadow {
+    margin: 0px auto 20px auto;
+    padding: 10px 20px;
+
+    background-color: var(--box-offwhite-light);
+    box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+    img {
+        max-width: 90%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin: 0px auto;
+    }
+
+    h1, h2, h3, h4, p {
+        padding: 0 20px;
+        margin: 10px auto;
+    }
+}
+
+.case-study-container {
+    padding: 20px;
+    margin: 10px;
+
+    background-color: var(--box-offwhite-light);
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    img {
+        margin: 0px auto;
+        width: 100%;
+    }
+
+    h1, h2, h3, h4, p {
+        margin: 2px;
+        padding: 0px 20px;
+    }
+
+    h4 {
+        color: var(--box-blue-light);
+        line-height: 0.9;
+    }
+}
+.case-study-description {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin-block: 5px;
+}
+
+.border-outline {
+    margin: 5px;
+    padding: 10px;
+
+    border: 1px solid var(--text-color-light);
+    border-radius: 50px;
+
+    text-align: center;
+    color: var(--text-color-light);
+    width: 40%;
 }

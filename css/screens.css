@@ -33,7 +33,7 @@
 html {
     --background-color-light: #EBE9E8;
     --text-color-light: #434343;
-    --box-offwhite-light: #f2f2f2;
+    --box-offwhite-light: #F2F2F2;
     --box-blue-light: #3A526E;
 
     --font-sans: Manrope;
@@ -54,7 +54,7 @@ main {
     margin: 10px;
 }
 
-h1, h2, h3, h4, p, button, ul, li {
+h1, h2, h3, h4, p, button, ul, li, a {
     margin: 0px;
     font-family: Manrope;
     color: var(--text-color-light);
@@ -63,13 +63,13 @@ h1, h2, h3, h4, p, button, ul, li {
 h1 {
     font-size: 36px;
     font-weight: 600;
-    line-height: 36px;
+    line-height: 1.1;
 }
 
 h2 {
     font-size: 30px;
     font-weight: 600;
-    line-height: 28px;
+    line-height: 1;
 }
 
 h3 {
@@ -86,7 +86,7 @@ h4 {
 p {
     font-size: 18px;
     font-weight: 300;
-    line-height: 1;
+    line-height: 1.1;
 }
 
 b {
@@ -220,12 +220,14 @@ nav {
     }
 }
 
+.text-serif {
+    font-family: var(--font-serif);
+    font-size: 24px;
+}
+
 .container {
     margin: 0px auto;
     padding: 0px 20px;
-
-    border: 1px solid var(--text-color-light);
-    border-radius: 30px;
 
     img {
         max-width: 100%;
@@ -236,7 +238,7 @@ nav {
     }
 
     h1, h2, h3, h4, p {
-        padding: 0 20px;
+        padding: 0 10px;
         margin: 10px auto;
     }
 }
@@ -252,15 +254,11 @@ nav {
     background-color: var(--box-blue-light);
     
     a {
+        font-size: 18px;
         color: white;
         text-align: center;
         border-color: var(--text-color-light);
     }
-}
-
-.text-serif {
-    font-family: var(--font-serif);
-    font-size: 24px;
 }
 
 .inline-img {
@@ -282,6 +280,14 @@ nav {
     margin: 0px auto;
 }
 
+.imgs-rounded {
+    img {
+        border-radius: 10px;
+        margin-block: 5px;
+        margin-inline: auto;
+    }
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -290,7 +296,7 @@ nav {
     margin: 10px auto;
     padding: 20px;
 
-    background-color: ;
+    background-color: var(--box-offwhite-light);
     border-radius: 30px;
     box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
 
@@ -317,8 +323,31 @@ nav {
     }
 }
 
+.section-background {
+    background-color: white;
+    border-radius: 30px;
+
+    margin-top: 20px;
+    padding-block: 10px;
+}
+
+.list {
+    border-top: 1px solid var(--background-color-light);
+    margin-block: 10px;
+
+    h4 {
+        margin-block: 5px;
+        padding-inline: 10px;
+    }
+
+    p {
+        margin-block: 5px;
+        padding-inline: 20px;
+    }
+}
+
 #contact {
-    padding: 10px;
+    padding-inline: 20px;
 
     h1, h2, p {
         margin-block: 15px;
@@ -329,55 +358,45 @@ nav {
     }
 }
 
+.img-link {
+    justify-content: left;
+
+    img {
+        width: 70px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    h4 {
+        text-decoration: underline;
+    }
+}
+
 .visual-page-card {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
     margin: 10px auto;
     padding: 20px;
 
-    border: 1px solid var(--text-color-light);
+    background-color: var(--background-color-light);
     border-radius: 30px;
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
+
 
     img:first-of-type {
         border-radius: 10px;
-        margin-block: 3px;
-        width: 300px;
+        margin-block: 10px;
+        width: 100%;
         height: auto;
+
+        margin: 0px auto;
     }
 
     h1, h4 {
         font-family: var(--font-serif);
         font-size: 20px;
+        line-height: 1.5;
         text-transform: lowercase;
-    }
-}
-
-.photo-section {
-    margin: 10px auto;
-    padding-block: 20px;
-    padding-inline: 3px;
-
-    border: 1px solid var(--text-color-light);
-    border-radius: 30px;
-
-    h2, h3, h4, p {
-        padding: 3px 20px;
-        margin: 5px auto;
-        
-        p {
-            line-height: 1.2;
-        }
-    }
-
-    img {
-        display: block;
-        object-fit: cover;
-        max-width: 90%;
-        height: auto;
-
-        border-radius: 5px;
-        margin: 3px auto;
     }
 }
 
@@ -390,16 +409,20 @@ nav {
     border-radius: 20px;
 
     img {
-        max-width: 90%;
-        height: auto;
-        object-fit: cover;
         display: block;
+        object-fit: cover;
         margin: 0px auto;
+        max-width: 100%;
+        height: auto;
     }
 
     h1, h2, h3, h4, p {
-        padding: 0 20px;
+        padding: 0 10px;
         margin: 10px auto;
+    }
+
+    :hover {
+        border: 1px solid var(--text-color-light);
     }
 }
 
@@ -426,6 +449,7 @@ nav {
         line-height: 0.9;
     }
 }
+
 .case-study-description {
     display: flex;
     flex-direction: row;
